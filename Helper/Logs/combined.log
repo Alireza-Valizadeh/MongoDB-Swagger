@@ -1,0 +1,189 @@
+{
+  message: ' priceMin: asd,',
+  label: 'Limitation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:41:56',
+  ms: '+0ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:27',
+  ms: '+0ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:30',
+  ms: '+3s'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:31',
+  ms: '+396ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:31',
+  ms: '+366ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:31',
+  ms: '+312ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:32',
+  ms: '+301ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:34',
+  ms: '+2s'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:35',
+  ms: '+1s'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:35',
+  ms: '+263ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:36',
+  ms: '+234ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:36',
+  ms: '+434ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:36',
+  ms: '+379ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:37',
+  ms: '+220ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:37',
+  ms: '+229ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:37',
+  ms: '+231ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:37',
+  ms: '+287ms'
+}
+{
+  message: ' priceMin: asd,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:38',
+  ms: '+164ms'
+}
+{
+  message: '::ffff:127.0.0.1 has requested /foods/filter too many times.',
+  label: 'Limitation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:56',
+  ms: '+18s'
+}
+{
+  message: '::ffff:127.0.0.1 has requested /foods/filter too many times.',
+  label: 'Limitation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:45:56',
+  ms: '+218ms'
+}
+{
+  message: ' name: undefined,',
+  label: 'Validation Error',
+  level: 'warn',
+  timestamp: 'Sat 2021-10-02 14:58:12',
+  ms: '+0ms'
+}
+{
+  message: 'Invalid data for adding a food',
+  label: 'MongoDB Save Error',
+  level: 'error',
+  timestamp: 'Sat 2021-10-02 15:10:51',
+  ms: '+0ms'
+}
+{
+  message: 'Invalid data for adding a food',
+  label: 'MongoDB Save Error',
+  level: 'error',
+  timestamp: 'Sat 2021-10-02 15:13:27',
+  ms: '+0ms'
+}
+{
+  message: 'Invalid data for adding a food',
+  label: 'MongoDB Save Error',
+  level: 'error',
+  timestamp: 'Sat 2021-10-02 15:14:17',
+  ms: '+0ms'
+}
+{
+  message: 'Food validation failed: price: Cast to Number failed for value "asds" (type string) at path "price"',
+  label: 'Internal server error',
+  level: 'error',
+  timestamp: 'Sat 2021-10-02 15:14:17',
+  ms: '+7ms'
+}
+{
+  message: 'Invalid data for adding a food',
+  label: 'MongoDB Save Error',
+  level: 'error',
+  timestamp: 'Sat 2021-10-02 15:14:53',
+  ms: '+0ms'
+}
+{
+  message: 'Food validation failed: price: Cast to Number failed for value "asds" (type string) at path "price"',
+  label: 'Internal server error',
+  level: 'error',
+  timestamp: 'Sat 2021-10-02 15:14:53',
+  ms: '+8ms'
+}

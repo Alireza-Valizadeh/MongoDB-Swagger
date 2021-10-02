@@ -27,6 +27,21 @@
  *     responses:
  *       201:
  *         description: food successfully created
+ * /foods/img:
+ *   get:
+ *     description: retrieve foods image
+ *     produces: 
+ *       - application/octet-stream              
+ *     consumes:
+ *       - application/json
+ *     parameters:
+ *       - name: name
+ *         in: query
+ *         required: false
+ *         type: string
+ *     responses: 
+ *       200:
+ *         description: successful
  * /foods:
  *   get:
  *     description: retrieve foods information
@@ -188,48 +203,84 @@ const upload = multer({ dest: 'uploads/' })
 const FoodFilter = require("../Factories/Filter")
 const { FoodModel, RestuarantModel } = require("../MongoDB/Models/restuarants")
 const Models = require("../MongoDB/Models/restuarants")
+const { query, validationResult } = require("express-validator")
+const { validationError, mongoError } = require("../Factories/Error")
+const LimitRequest = require("../Security/Limiter")
+const logger = require("../Helper/Logger")
+const LogStackTrace = require("../Helper/LogStackTrace")
 const router = express.Router()
 
-router.post("/food", upload.single("image"), (req, res, next) => {
+router.post("/food", upload.single("image"), 
+
+(req, res, next) => {
     const foodModel = new FoodModel({
         name: req.body.name,
         price: req.body.price,
         quantity: req.body.quantity,
-        image: Buffer.from(req.file.path),
         available: req.body.quantity != 0
     });
-    foodModel.save((err, model) => {
-        if (err) {
-            console.log(err)
-            return res.status(500).send(err)
-        }
-        fs.
-        res.status(201).send(model)
+    fs.readFile(req.file.path).then((re) => {
+        foodModel.image = re
+        foodModel.save((err, model) => {
+            if (err) {
+                logger.error({message: "Invalid data for adding a food", label: "MongoDB Save Error"})
+                return res.status(500).send(mongoError(err))
+            }
+            fs.rm(req.file.path, {
+                maxRetries: 3, // Default = 0
+                retryDelay: 100 // Default
+            }).then((respo) => {
+                console.log("deleted successfully")
+            }).catch((e) => {
+                logger.error({message: LogStackTrace(e.stack), label: "MongoDB Save Error"})
+            })
+            res.status(201).send(model.name + " was created successfully.")
+        })
+    }).catch((er) => {
+        logger.error({message: LogStackTrace(er.stack), label: "MongoDB Save Error"})
     })
 })
-
 
 router.get("/foods", (req, res, next) => {
     let searchword = ""
     if (req.query.name != undefined) searchword = req.query.name
     var query = searchword != "" ? { name: searchword } : {}
-    Models.FoodModel.find(query, 'image').exec((err, docs) => {
-        if (err) {
-            return res.status(500).send(err)
-        }
-        res.status(200).send(docs[0].image)
-    })
-})
-router.get("/foods/filter", (req, res, next) => {
-    const { name, priceMin, priceMax, available } = req.query;
-    const foodFilter = new FoodFilter(name, priceMin, priceMax, available)
-    Models.FoodModel.find(foodFilter.getQuery(), 'name price available').exec((err, docs) => {
+    Models.FoodModel.find(query, 'name price available').exec((err, docs) => {
         if (err) {
             return res.status(500).send(err)
         }
         res.status(200).send(docs)
     })
 })
+
+router.get("/foods/img",
+    query("name").notEmpty().withMessage("Please provide a food name"),
+    validationError,
+    (req, res, next) => {
+        Models.FoodModel.find({ name: req.query.name }, 'image').exec((err, docs) => {
+            if (err) {
+                return res.status(500).send(err)
+            }
+            if (docs.length < 1) {
+                return res.status(200).send([])
+            }
+            res.status(200).send(docs[0].image)
+        })
+    })
+router.get("/foods/filter",
+    query("priceMin").isNumeric().withMessage("Minimum price must be a number"),
+    validationError,
+    LimitRequest,
+    (req, res, next) => {
+        const { name, priceMin, priceMax, available } = req.query;
+        const foodFilter = new FoodFilter(name, priceMin, priceMax, available)
+        Models.FoodModel.find(foodFilter.getQuery(), 'name price available').exec((err, docs) => {
+            if (err) {
+                return res.status(500).send(err)
+            }
+            res.status(200).send(docs)
+        })
+    })
 
 router.post("/restuarant", (req, res, next) => {
     const { name, opensFrom, closesAt, establishedAt, image, lat, lon } = req.body;
