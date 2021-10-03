@@ -6,6 +6,9 @@
  *     description: Add a food to the database
  *     consumes:
  *       - application/form-data
+ *     parameters:
+ *        - name: RestName
+ *          in: query 
  *     requestBody:
  *       content:
  *         multipart/form-data:
@@ -204,42 +207,48 @@ const FoodFilter = require("../Factories/Filter")
 const { FoodModel, RestuarantModel } = require("../MongoDB/Models/restuarants")
 const Models = require("../MongoDB/Models/restuarants")
 const { query, validationResult } = require("express-validator")
-const { validationError, mongoError } = require("../Factories/Error")
+const { validationError, mongoError, NotFoundError } = require("../Factories/Error")
 const LimitRequest = require("../Security/Limiter")
 const logger = require("../Helper/Logger")
 const LogStackTrace = require("../Helper/LogStackTrace")
 const router = express.Router()
 
-router.post("/food", upload.single("image"), 
-
-(req, res, next) => {
-    const foodModel = new FoodModel({
-        name: req.body.name,
-        price: req.body.price,
-        quantity: req.body.quantity,
-        available: req.body.quantity != 0
-    });
-    fs.readFile(req.file.path).then((re) => {
-        foodModel.image = re
-        foodModel.save((err, model) => {
+router.post("/food", upload.single("image"),
+    (req, res, next) => {
+        const foodModel = new FoodModel({
+            name: req.body.name,
+            price: req.body.price,
+            quantity: req.body.quantity,
+            available: req.body.quantity != 0
+        });
+        RestuarantModel.findOneAndUpdate({ name: req.query.RestName }, { "$push": { Foods: foodModel } }, {
+            new: true,
+        }).exec((err, docs) => {
             if (err) {
-                logger.error({message: "Invalid data for adding a food", label: "MongoDB Save Error"})
                 return res.status(500).send(mongoError(err))
             }
-            fs.rm(req.file.path, {
-                maxRetries: 3, // Default = 0
-                retryDelay: 100 // Default
-            }).then((respo) => {
-                console.log("deleted successfully")
-            }).catch((e) => {
-                logger.error({message: LogStackTrace(e.stack), label: "MongoDB Save Error"})
-            })
-            res.status(201).send(model.name + " was created successfully.")
         })
-    }).catch((er) => {
-        logger.error({message: LogStackTrace(er.stack), label: "MongoDB Save Error"})
+        fs.readFile(req.file.path).then((re) => {
+            foodModel.image = re
+            foodModel.save((err, model) => {
+                if (err) {
+                    return res.status(500).send(mongoError(err))
+                }
+                fs.rm(req.file.path, {
+                    maxRetries: 3, // Default = 0
+                    retryDelay: 100 // Default
+                }).then((respo) => {
+                    console.log("deleted successfully")
+                }).catch((e) => {
+                    logger.error({ message: LogStackTrace(e.stack), label: "MongoDB Save Error" })
+                })
+                res.status(201).send(model.name + " was created successfully.")
+            })
+
+        }).catch((er) => {
+            logger.error({ message: LogStackTrace(er.stack), label: "MongoDB Save Error" })
+        })
     })
-})
 
 router.get("/foods", (req, res, next) => {
     let searchword = ""
@@ -247,7 +256,7 @@ router.get("/foods", (req, res, next) => {
     var query = searchword != "" ? { name: searchword } : {}
     Models.FoodModel.find(query, 'name price available').exec((err, docs) => {
         if (err) {
-            return res.status(500).send(err)
+            return res.status(500).send(mongoError(err))
         }
         res.status(200).send(docs)
     })
@@ -259,10 +268,10 @@ router.get("/foods/img",
     (req, res, next) => {
         Models.FoodModel.find({ name: req.query.name }, 'image').exec((err, docs) => {
             if (err) {
-                return res.status(500).send(err)
+                return res.status(500).send(mongoError(err))
             }
             if (docs.length < 1) {
-                return res.status(200).send([])
+                return NotFoundError(req, res, next)
             }
             res.status(200).send(docs[0].image)
         })
@@ -283,6 +292,18 @@ router.get("/foods/filter",
     })
 
 router.post("/restuarant", (req, res, next) => {
+    const foodModel = new FoodModel({
+        name: "TEST123",
+        price: 12,
+        quantity: 12,
+        available: 12 != 0
+    });
+    foodModel.save((err, foo) => {
+        if (err) {
+            return res.status(500).send(mongoError(err))
+        }
+        console.log(foo._id)
+    })
     const { name, opensFrom, closesAt, establishedAt, image, lat, lon } = req.body;
     const restuarantModel = Models.RestuarantModel({
         name: name,
@@ -291,7 +312,7 @@ router.post("/restuarant", (req, res, next) => {
         establishedAt: establishedAt,
         image: image,
         lat: lat,
-        lon: lon
+        lon: lon,
     })
     restuarantModel.save((err, model) => {
         if (err) {
@@ -332,12 +353,10 @@ router.delete("/deleteRest", (req, res, next) => {
         select: "name"
     }, (err, doc) => {
         if (err) {
-            console.log(`Error: ` + err)
-            return res.status(500).send(err)
+            mongoError(err)
         } else {
             if (!doc) {
-                console.log("message")
-                return res.status(404).send("NOT FOUND")
+                NotFoundError(req, res, next)
             } else {
                 res.status(200).send(doc)
             }

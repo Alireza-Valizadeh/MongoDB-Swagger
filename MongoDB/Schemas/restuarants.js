@@ -1,14 +1,5 @@
 const mongoose = require("mongoose")
 
-const RestuarantSchema = new mongoose.Schema({
-      name: { type: String, default: "Not set", required: true },
-      opensFrom: { type: Number, default: 12 },
-      closesAt: { type: Number, default: 24 },
-      establishedAt: { type: Number, default: new Date().getFullYear() },
-      image: { type: Buffer},
-      lat: { type: Number, required: true, min: 0, max: 90 },
-      lon: { type: Number, required: true, min: 0, max: 90 }
-})
 
 const FoodSchema = new mongoose.Schema({
       name: { type: String, default: "Not set" },
@@ -17,6 +8,22 @@ const FoodSchema = new mongoose.Schema({
       quantity: { type: Number },
       image: { type: Buffer}
 })
+
+
+const RestuarantSchema = new mongoose.Schema({
+      name: { type: String, default: "Not set", required: true },
+      opensFrom: { type: Number, default: 12 },
+      closesAt: { type: Number, default: 24 },
+      establishedAt: { type: Number, default: new Date().getFullYear() },
+      image: { type: Buffer},
+      lat: { type: Number, required: true, min: 0, max: 90 },
+      lon: { type: Number, required: true, min: 0, max: 90 },
+      Foods: [{
+            type: FoodSchema
+      }]
+})
+
+
 
 module.exports = {
       RestuarantSchema: RestuarantSchema,

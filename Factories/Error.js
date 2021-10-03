@@ -67,6 +67,15 @@ function sqlError(error) {
       }
 }
 
+function NotFoundError(req, res, next) {
+      logger.warn({message: `${req.path} found no resullt for ${req.connection.remoteAddress}`, label: "404 Not Found"})
+      return new ErrorBuilder("Not Found")
+      .setIO(true)
+      .setDesc("No result found. Please try again!")
+      .setHttpCode(404)
+      .response(res)
+}
+
 class BaseError  { 
       constructor(title, httpCode, errors, description, isOperational) {
             this.title = title;
@@ -114,5 +123,6 @@ module.exports = {
       validationError: validationError,
       sqlError: sqlError,
       LimitationError: LimitationError,
-      mongoError: mongoError
+      mongoError: mongoError,
+      NotFoundError: NotFoundError
 }

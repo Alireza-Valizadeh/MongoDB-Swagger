@@ -187,3 +187,350 @@
   timestamp: 'Sat 2021-10-02 15:14:53',
   ms: '+8ms'
 }
+{
+  message: '/deleteRest found no resullt for ::1',
+  label: '404 Not Found',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 08:30:39',
+  ms: '+0ms'
+}
+{
+  message: '/deleteRest found no resullt for ::1',
+  label: '404 Not Found',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 08:33:26',
+  ms: '+0ms'
+}
+{
+  message: '/deleteRest found no resullt for ::1',
+  label: '404 Not Found',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 08:33:31',
+  ms: '+5s'
+}
+{
+  message: '/deleteRest found no resullt for ::1',
+  label: '404 Not Found',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 08:34:04',
+  ms: '+32s'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:03:51',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:05:37',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:05:56',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:08:53',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:09:15',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:24:06',
+  ms: '+0ms'
+}
+{
+  message: '/foods/img found no resullt for ::1',
+  label: '404 Not Found',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:28:53',
+  ms: '+5m'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: '\x1B[33mwarn\x1B[39m',
+  timestamp: 'Sun 2021-10-03 09:34:04',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: '\x1B[33mwarn\x1B[39m',
+  timestamp: 'Sun 2021-10-03 09:34:30',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:38:52',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:47:14',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:47:49',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:51:46',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:58:37',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 09:58:40',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:00:41',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:00:45',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:01:09',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:03:16',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:06:22',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:06:37',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:06:59',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:07:24',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:07:41',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:15:14',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:15:34',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 10:15:55',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 11:37:44',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:00:32',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:01:24',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:02:11',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:02:22',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:02:30',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:11:39',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:12:47',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:13:10',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:33:50',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:38:42',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:39:06',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:42:36',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:45:27',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:48:22',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:48:31',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:49:12',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:51:42',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:53:17',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:54:30',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:54:34',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:56:31',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 14:59:32',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 15:02:13',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 15:03:29',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Sun 2021-10-03 15:07:29',
+  ms: '+0ms'
+}
