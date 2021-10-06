@@ -534,3 +534,167 @@
   timestamp: 'Sun 2021-10-03 15:07:29',
   ms: '+0ms'
 }
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 09:16:40',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 09:20:44',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 09:39:13',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 09:39:21',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 09:48:09',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 09:49:50',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 09:52:39',
+  ms: '+0ms'
+}
+{
+  message: `Schema hasn't been registered for model "Rest".\n` +
+    'Use mongoose.model(name, schema)',
+  label: 'Internal server error',
+  level: 'error',
+  timestamp: 'Wed 2021-10-06 09:52:57',
+  ms: '+17s'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 09:53:37',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 09:53:45',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 09:53:55',
+  ms: '+0ms'
+}
+{
+  message: `Schema hasn't been registered for model "RestuarantModel".\n` +
+    'Use mongoose.model(name, schema)',
+  label: 'Internal server error',
+  level: 'error',
+  timestamp: 'Wed 2021-10-06 09:53:58',
+  ms: '+3s'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:00:11',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:03:19',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:04:03',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:06:35',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:06:45',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:07:50',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:08:44',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:10:11',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:11:02',
+  ms: '+0ms'
+}
+{
+  message: `Schema hasn't been registered for model "Rests".\n` +
+    'Use mongoose.model(name, schema)',
+  label: 'Internal server error',
+  level: 'error',
+  timestamp: 'Wed 2021-10-06 10:11:02',
+  ms: '+65ms'
+}
+{
+  message: `Schema hasn't been registered for model "Rests".\n` +
+    'Use mongoose.model(name, schema)',
+  label: 'Internal server error',
+  level: 'error',
+  timestamp: 'Wed 2021-10-06 10:17:51',
+  ms: '+7m'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:18:09',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:18:21',
+  ms: '+0ms'
+}
+{
+  message: 'Successful initial connection to MongoDB database',
+  level: 'warn',
+  timestamp: 'Wed 2021-10-06 10:18:30',
+  ms: '+0ms'
+}

@@ -221,12 +221,14 @@ router.post("/food", upload.single("image"),
             quantity: req.body.quantity,
             available: req.body.quantity != 0
         });
-        RestuarantModel.findOneAndUpdate({ name: req.query.RestName }, { "$push": { Foods: foodModel } }, {
-            new: true,
-        }).exec((err, docs) => {
-            if (err) {
-                return res.status(500).send(mongoError(err))
+        RestuarantModel.find({name : req.query.RestName}, "_id", (errr, ids) => {
+            if (errr) {
+                return res.status(500).send(mongoError(errr))
             }
+            if (ids.length < 1) {
+                return NotFoundError(req, res, next)
+            }
+            foodModel.Rests = ids
         })
         fs.readFile(req.file.path).then((re) => {
             foodModel.image = re
@@ -254,7 +256,7 @@ router.get("/foods", (req, res, next) => {
     let searchword = ""
     if (req.query.name != undefined) searchword = req.query.name
     var query = searchword != "" ? { name: searchword } : {}
-    Models.FoodModel.find(query, 'name price available').exec((err, docs) => {
+    FoodModel.findOne(query).populate("Rests").exec((err, docs) => {
         if (err) {
             return res.status(500).send(mongoError(err))
         }
@@ -266,7 +268,7 @@ router.get("/foods/img",
     query("name").notEmpty().withMessage("Please provide a food name"),
     validationError,
     (req, res, next) => {
-        Models.FoodModel.find({ name: req.query.name }, 'image').exec((err, docs) => {
+        FoodModel.find({ name: req.query.name }, 'image').exec((err, docs) => {
             if (err) {
                 return res.status(500).send(mongoError(err))
             }
@@ -335,7 +337,7 @@ router.get("/restuarants", (req, res, next) => {
 router.put("/updateRest", (req, res, next) => {
     const { name } = req.query;
     const { newLat, newLon } = req.body;
-    RestuarantModel.findOneAndUpdate({ name: name }, { lat: newLat, lon: newLon }, {
+    RestuarantModel.findOneAndUpdate({ name: name }, { lat: newLat, lon: newLon, $set: {test: "1"} }, {
         new: true,
         fields: "name lat lon"
     }).exec((err, docs) => {
